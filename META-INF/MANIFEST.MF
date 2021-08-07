@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Main-Class: com.pengping.iothub.IothubApplication
+Class-Path: netty-codec-dns-4.1.66.Final.jar spring-boot-starter-tomcat-
+ 2.5.3.jar accessors-smart-2.4.7.jar spring-oxm-5.3.9.jar spring-boot-st
+ arter-json-2.5.3.jar netty-transport-native-epoll-4.1.66.Final-linux-x8
+ 6_64.jar jakarta.mail-1.6.7.jar oauth2-oidc-sdk-9.9.jar log4j-jul-2.14.
+ 1.jar spring-expression-5.3.9.jar snakeyaml-1.28.jar spring-boot-autoco
+ nfigure-2.5.3.jar netty-resolver-dns-native-macos-4.1.66.Final-osx-x86_
+ 64.jar tomcat-embed-websocket-9.0.50.jar spring-core-5.3.9.jar content-
+ type-2.1.jar spring-webmvc-5.3.9.jar spring-session-core-2.5.1.jar nett
+ y-common-4.1.66.Final.jar spring-security-oauth2-jose-5.5.1.jar spring-
+ aop-5.3.9.jar jcip-annotations-1.0-1.jar spring-boot-starter-jdbc-2.5.3
+ .jar netty-codec-4.1.66.Final.jar spring-jdbc-5.3.9.jar spring-security
+ -oauth2-core-5.5.1.jar spring-security-config-5.5.1.jar mybatis-spring-
+ 2.0.6.jar spring-boot-starter-security-2.5.3.jar jackson-databind-2.12.
+ 4.jar spring-security-core-5.5.1.jar spring-webflux-5.3.9.jar saaj-impl
+ -1.5.3.jar jul-to-slf4j-1.7.32.jar netty-codec-http2-4.1.66.Final.jar j
+ son-smart-2.4.7.jar jakarta.annotation-api-1.3.5.jar spring-jcl-5.3.9.j
+ ar netty-buffer-4.1.66.Final.jar reactor-core-3.4.8.jar spring-beans-5.
+ 3.9.jar netty-resolver-4.1.66.Final.jar jackson-core-2.12.4.jar slf4j-a
+ pi-1.7.32.jar mybatis-spring-boot-autoconfigure-2.2.0.jar netty-codec-h
+ ttp-4.1.66.Final.jar spring-boot-starter-log4j2-2.5.3.jar jackson-datat
+ ype-jsr310-2.12.4.jar netty-transport-native-unix-common-4.1.66.Final.j
+ ar spring-boot-starter-oauth2-client-2.5.3.jar spring-security-crypto-5
+ .5.1.jar spring-xml-3.1.1.jar netty-transport-4.1.66.Final.jar log4j-sl
+ f4j-impl-2.14.1.jar log4j-api-2.14.1.jar nimbus-jose-jwt-9.10.jar sprin
+ g-ws-core-3.1.1.jar spring-boot-starter-webflux-2.5.3.jar reactor-netty
+ -core-1.0.9.jar netty-handler-4.1.66.Final.jar netty-resolver-dns-4.1.6
+ 6.Final.jar netty-handler-proxy-4.1.66.Final.jar tomcat-embed-core-9.0.
+ 50.jar spring-context-5.3.9.jar jakarta.activation-api-1.2.2.jar mariad
+ b-java-client-2.7.3.jar spring-boot-starter-2.5.3.jar tomcat-embed-el-9
+ .0.50.jar reactor-netty-http-1.0.9.jar mybatis-3.5.7.jar jakarta.xml.bi
+ nd-api-2.3.3.jar jackson-datatype-jdk8-2.12.4.jar jackson-annotations-2
+ .12.4.jar lang-tag-1.5.jar reactive-streams-1.0.3.jar netty-codec-socks
+ -4.1.66.Final.jar spring-boot-starter-web-services-2.5.3.jar jakarta.jw
+ s-api-2.1.0.jar spring-security-oauth2-client-5.5.1.jar spring-security
+ -web-5.5.1.jar HikariCP-4.0.3.jar jakarta.xml.ws-api-2.3.3.jar mybatis-
+ spring-boot-starter-2.2.0.jar spring-boot-2.5.3.jar jackson-module-para
+ meter-names-2.12.4.jar spring-tx-5.3.9.jar lombok-1.18.20.jar spring-bo
+ ot-starter-reactor-netty-2.5.3.jar spring-web-5.3.9.jar asm-9.1.jar jak
+ arta.xml.soap-api-1.4.2.jar stax-ex-1.8.3.jar spring-boot-starter-web-2
+ .5.3.jar jakarta.activation-1.2.2.jar log4j-core-2.14.1.jar
+

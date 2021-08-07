@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 ，为了使用接口动态代理，这里必须是接口的全路径名-->
+<mapper namespace="com.pengping.dao.VICalibrationDataMapper">
+    <!-- statement，内容：sql语句。
+       id：唯一标识，随便写，在同一个命名空间下保持唯一，使用动态代理之后要求和方法名保持一致
+       resultType：sql语句查询结果集的封装类型，使用动态代理之后和方法的返回类型一致；resultMap：二选一
+       parameterType：参数的类型，使用动态代理之后和方法的参数类型一致
+     -->
+    <select id="queryVICalibrationDataByPosition" resultType="com.pengping.POJO.VICalibrationData">
+        select * from s_calibration_data where name = #{name} and ch = #{ch} and position = #{position}
+    </select>
+
+    <select id="queryVICalibrationDataAll" resultType="com.pengping.POJO.VICalibrationData">
+        select * from s_calibration_data
+    </select>
+
+    <select id="queryVICalibrationDataByGroupName" resultType="com.pengping.POJO.VICalibrationData">
+        select * from s_calibration_data where name=#{groupName}
+    </select>
+    <!-- 新增的Statement
+       id：唯一标识，随便写，在同一个命名空间下保持唯一，使用动态代理之后要求和方法名保持一致
+       parameterType：参数的类型，使用动态代理之后和方法的参数类型一致
+       useGeneratedKeys:开启主键回写
+       keyColumn：指定数据库的主键
+       keyProperty：主键对应的pojo属性名
+     -->
+    <insert id="insertVICalibrationData" parameterType="com.pengping.POJO.VICalibrationData">
+        INSERT INTO s_calibration_data (
+        name,
+        ch,
+        position,
+        v,
+        vpwm,
+        i,
+        ipwm,
+        note
+        )
+        VALUES
+        (
+        #{name},
+        #{ch},
+        #{position},
+        #{V},
+        #{VPWM},
+        #{I},
+        #{IPWM},
+        #{note}
+        );
+    </insert>
+    <!--
+       更新的statement
+       id：唯一标识，随便写，在同一个命名空间下保持唯一，使用动态代理之后要求和方法名保持一致
+       parameterType：参数的类型，使用动态代理之后和方法的参数类型一致
+     -->
+    <update id="updateVICalibrationData" parameterType="com.pengping.POJO.VICalibrationData">
+        UPDATE s_calibration_data
+        <trim prefix="set" suffixOverrides=",">
+            <if test="V!=null">V = #{V},</if>
+            <if test="VPWM!=null">VPWM = #{VPWM},</if>
+            <if test="I!=null">I = #{I},</if>
+            <if test="IPWM!=null">IPWM = #{IPWM},</if>
+            <if test="note!=null">note = #{note},</if>
+        </trim>
+        WHERE
+        (name = #{name} and ch=#{ch} and position=#{position});
+    </update>
+    <!--
+       删除的statement
+       id：唯一标识，随便写，在同一个命名空间下保持唯一，使用动态代理之后要求和方法名保持一致
+       parameterType：参数的类型，使用动态代理之后和方法的参数类型一致
+     -->
+    <delete id="deleteVICalibrationDataById" parameterType="com.pengping.POJO.VICalibrationData">
+        delete from s_calibration_data where name = #{name} and ch = #{ch} and position = #{position}
+    </delete>
+</mapper>

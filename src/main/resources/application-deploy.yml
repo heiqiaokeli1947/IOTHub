@@ -1,0 +1,14 @@
+logging:
+  config: classpath:log4j2-boot-pro.xml
+
+
+spring:
+  datasource:
+    username: root
+    password: 1234
+    url: jdbc:mysql://127.0.0.1:3306/pengping?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true
+    driver-class-name: org.mariadb.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.entity
