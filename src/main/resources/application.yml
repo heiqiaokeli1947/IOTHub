@@ -1,12 +1,12 @@
 
-# ¶Ë¿Ú
+# ç«¯å£
 server:
   port: 8002
 
 spring:
   application:
-    # Ó¦ÓÃÃû³Æ
+    # åº”ç”¨åç§°
     name: IOTHub
   profiles:
-    # Ê¹ÓÃµÄÅäÖÃÎÄ¼ş
+    # ä½¿ç”¨çš„é…ç½®æ–‡ä»¶
     active: develop
