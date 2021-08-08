@@ -57,19 +57,19 @@
         <foreach collection="list" item="data" index="index" separator=",">
             (
             #{data.uuid},
-            #{deviceIp},
-            #{deviceName},
-            #{devicetype},
+            #{data.deviceIp},
+            #{data.deviceName},
+            #{data.devicetype},
             NOW(),
             #{data.description},
-            #{userName},
-            #{password},
-            #{productKey},
-            #{deviceSecret}
-            #{regionId},
-            #{longitude},
-            #{latitude},
-            #{altitude}
+            #{data.userName},
+            #{data.password},
+            #{data.productKey},
+            #{data.deviceSecret},
+            #{data.regionId},
+            #{data.longitude},
+            #{data.latitude},
+            #{data.altitude}
             )
         </foreach>
     </insert>

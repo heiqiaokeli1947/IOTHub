@@ -17,9 +17,9 @@ public class DeviceInfo {
     private String productKey;
     private String deviceSecret;
     private String regionId;
-    private BigDecimal longitude;
-    private BigDecimal latitude;
-    private BigDecimal altitude;
+    private Double longitude;
+    private Double latitude;
+    private Double altitude;
 
     public DeviceInfo() {
 
@@ -137,27 +137,27 @@ public class DeviceInfo {
         this.regionId = regionId;
     }
 
-    public BigDecimal getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(BigDecimal longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
-    public BigDecimal getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(BigDecimal latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
-    public BigDecimal getAltitude() {
+    public Double getAltitude() {
         return altitude;
     }
 
-    public void setAltitude(BigDecimal altitude) {
+    public void setAltitude(Double altitude) {
         this.altitude = altitude;
     }
 

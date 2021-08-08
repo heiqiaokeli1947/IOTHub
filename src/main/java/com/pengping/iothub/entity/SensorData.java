@@ -5,7 +5,9 @@ import java.util.Date;
 public class SensorData {
 
     private String uuid;
+    private String deviceIp;
     private Date time;
+    private int timestamp;
     private float temperature;
     private float humidity;
     private float pressure;
@@ -20,12 +22,28 @@ public class SensorData {
         this.uuid = uuid;
     }
 
+    public String getDeviceIp() {
+        return deviceIp;
+    }
+
+    public void setDeviceIp(String deviceIp) {
+        this.deviceIp = deviceIp;
+    }
+
     public Date getTime() {
         return time;
     }
 
     public void setTime(Date time) {
         this.time = time;
+    }
+
+    public int getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(int timestamp) {
+        this.timestamp = timestamp;
     }
 
     public float getTemperature() {
@@ -70,9 +88,11 @@ public class SensorData {
 
     @Override
     public String toString() {
-        return "TempSensorData{" +
+        return "SensorData{" +
                 "uuid='" + uuid + '\'' +
+                ", deviceIp='" + deviceIp + '\'' +
                 ", time=" + time +
+                ", timestamp=" + timestamp +
                 ", temperature=" + temperature +
                 ", humidity=" + humidity +
                 ", pressure=" + pressure +

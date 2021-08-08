@@ -10,6 +10,7 @@
      -->
     <select id="queryAllSensorData" resultType="com.pengping.iothub.entity.SensorData">
         select uuid,
+        deviceIp,
         time,
         temperature,
         humidity,
@@ -27,6 +28,7 @@
     <insert id="insertSensorData" parameterType="java.util.List">
         INSERT INTO s_sensor_data (
         uuid,
+        deviceIp,
         time,
         temperature,
         humidity,
@@ -38,6 +40,7 @@
         <foreach collection="list" item="data" index="index" separator=",">
             (
             #{data.uuid},
+            #{data.deviceIp},
             #{data.time},
             #{data.temperature},
             #{data.humidity},

@@ -11,9 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IothubApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IothubApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(IothubApplication.class);
     public static void main(String[] args) {
-        LOGGER.info("IOTHub star.");
+        logger.info("IOTHub star.");
         SpringApplication.run(IothubApplication.class, args);
     }
 
