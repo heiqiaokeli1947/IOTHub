@@ -1,0 +1,14 @@
+logging:
+  config: classpath:log4j2-boot-dev.xml
+
+
+spring:
+  datasource:
+    username: root
+    password: Changeme_123
+    url: jdbc:mysql://127.0.0.1:3306/iothub?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true
+    driver-class-name: org.mariadb.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.pengping.iothub.entity

@@ -9,4 +9,4 @@ spring:
     name: IOTHub
   profiles:
     # 使用的配置文件
-    active: develop
+    active: P50
