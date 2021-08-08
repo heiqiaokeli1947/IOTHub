@@ -1,9 +1,30 @@
-package com.pengping.iothub.dao;
+package com.pengping.iothub.entity;
 
 import java.util.Date;
 
-public class table_s_user_info {
+public class User {
+    private String userId;
+    private String userType;
+    private String status;
+    private Date registerTime;
+    private String userName;
+    private String password;
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    private String sex;
+    private String province;
+    private String city;
+    private String country;
+    private String headimgurl;
+    private String privilege;
+    private String unionid;
 
     public String getUserId() {
         return userId;
@@ -37,12 +58,12 @@ public class table_s_user_info {
         this.registerTime = registerTime;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getSex() {
@@ -101,18 +122,22 @@ public class table_s_user_info {
         this.unionid = unionid;
     }
 
-    private String userId;
-    private String userType;
-    private String status;
-    private Date registerTime;
-    private String nickname;
-    private String sex;
-    private String province;
-    private String city;
-    private String country;
-    private String headimgurl;
-    private String privilege;
-    private String unionid;
-
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", userType='" + userType + '\'' +
+                ", status='" + status + '\'' +
+                ", registerTime=" + registerTime +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", sex='" + sex + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                ", headimgurl='" + headimgurl + '\'' +
+                ", privilege='" + privilege + '\'' +
+                ", unionid='" + unionid + '\'' +
+                '}';
+    }
 }

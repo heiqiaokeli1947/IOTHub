@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 ，为了使用接口动态代理，这里必须是接口的全路径名-->
+<mapper namespace="com.pengping.iothub.mapper.DeviceInfoMapper">
+    <!--
+       1.#{},预编译的方式preparedstatement，使用占位符替换，防止sql注入，一个参数的时候，任意参数名可以接收
+       2.${},普通的Statement，字符串直接拼接，不可以防止sql注入，一个参数的时候，必须使用${value}接收参数
+     -->
+    <select id="queryAllDeviceInfo" resultType="com.pengping.iothub.entity.DeviceInfo">
+        select
+               uuid,
+               deviceIp,
+               deviceName,
+               devicetype,
+               addTime,
+               description,
+            userName,
+            password,
+            productKey,
+            deviceSecret,
+            regionId,
+            longitude,
+            latitude,
+            altitude
+         from s_device_info order by deviceName
+    </select>
+
+    <select id="queryDeviceInfoByUUID" resultType="com.pengping.iothub.entity.DeviceInfo">
+        select * from s_device_info where uuid = #{uuid}
+    </select>
+
+
+    <insert id="insertDeviceInfo" parameterType="java.util.List">
+        INSERT INTO s_device_info (
+        uuid,
+        deviceIp,
+        deviceName,
+        devicetype,
+        addTime,
+        description,
+        userName,
+        password,
+        productKey,
+        deviceSecret,
+        regionId,
+        longitude,
+        latitude,
+        altitude
+        )
+        VALUES
+        <foreach collection="list" item="data" index="index" separator=",">
+            (
+            #{data.uuid},
+            #{deviceIp},
+            #{deviceName},
+            #{devicetype},
+            NOW(),
+            #{data.description},
+            #{userName},
+            #{password},
+            #{productKey},
+            #{deviceSecret}
+            #{regionId},
+            #{longitude},
+            #{latitude},
+            #{altitude}
+            )
+        </foreach>
+    </insert>
+
+    <delete id="deleteDeviceInfoByUUID" parameterType="java.lang.String">
+        delete from s_device_info where uuid=#{uuid}
+    </delete>
+</mapper>

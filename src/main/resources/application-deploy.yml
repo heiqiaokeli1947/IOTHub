@@ -6,7 +6,7 @@ spring:
   datasource:
     username: root
     password: 1234
-    url: jdbc:mysql://127.0.0.1:3306/pengping?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1:3306/IOTHub?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true
     driver-class-name: org.mariadb.jdbc.Driver
 
 mybatis:

@@ -1,11 +1,12 @@
-package com.pengping.iothub.dao;
+package com.pengping.iothub.mapper;
 
-import com.pengping.iothub.pojo.User;
+import com.pengping.iothub.entity.User;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
+@Repository
 public interface UserMapper {
 
     /**
@@ -17,18 +18,11 @@ public interface UserMapper {
     public User login(@Param("userName") String userName, @Param("password") String password);
 
     /**
-     * 根据表名查询用户信息（直接使用注解指定传入参数名称）
-     * @param tableName
-     * @return
-     */
-    public List<User> queryUserByTableName(@Param("tableName") String tableName);
-
-    /**
      * 根据Id查询用户信息
      * @param id
      * @return
      */
-    public User queryUserById(Long id);
+    public User queryUserByUserId(Long id);
 
     /**
      * 查询所有用户信息
@@ -42,15 +36,10 @@ public interface UserMapper {
      */
     public void insertUser(User user);
 
-    /**
-     * 根据id更新用户信息
-     * @param user
-     */
-    public void updateUser(User user);
 
     /**
      * 根据id删除用户信息
      * @param id
      */
-    public void deleteUserById(Long id);
+    public void deleteUserByUserId(Long id);
 }
