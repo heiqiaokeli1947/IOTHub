@@ -11,6 +11,7 @@ public interface DeviceInfoMapper {
     public List<DeviceInfo> queryAllDeviceInfo();
 
     public DeviceInfo queryDeviceInfoByUUID(String uuid);
+    public DeviceInfo queryDeviceInfoByIP(String deviceIp);
 
     public int insertDeviceInfo(List<DeviceInfo> deviceInfos);
 

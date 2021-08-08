@@ -31,6 +31,10 @@
         select * from s_device_info where uuid = #{uuid}
     </select>
 
+    <select id="queryDeviceInfoByIP" resultType="com.pengping.iothub.entity.DeviceInfo">
+        select * from s_device_info where deviceip = #{deviceIp}
+    </select>
+
 
     <insert id="insertDeviceInfo" parameterType="java.util.List">
         INSERT INTO s_device_info (

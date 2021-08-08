@@ -1,16 +1,12 @@
 package com.pengping.iothub.entity;
 
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.UUID;
 
-public class DeviceInfo {
-    private String uuid;
+public class DeviceRegisterInfo {
     private String deviceIp;
     private String deviceName;
     private String devicetype;
-    private Date addTime;
     private String description;
     private String userName;
     private String password;
@@ -20,42 +16,6 @@ public class DeviceInfo {
     private BigDecimal longitude;
     private BigDecimal latitude;
     private BigDecimal altitude;
-
-    public DeviceInfo() {
-
-    }
-
-    public DeviceInfo(DeviceRegisterInfo deviceRegisterInfo) {
-
-        Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        //从前端或者自己模拟一个日期格式，转为String即可
-        String now = format.format(date);
-
-
-        this.uuid = UUID.randomUUID().toString().replaceAll("-","");;
-        this.addTime = new Date();
-        this.deviceIp = deviceRegisterInfo.getDeviceIp();
-        this.deviceName = deviceRegisterInfo.getDeviceName();
-        this.devicetype = deviceRegisterInfo.getDevicetype();
-        this.description = deviceRegisterInfo.getDescription();
-        this.userName = deviceRegisterInfo.getUserName();
-        this.password = deviceRegisterInfo.getPassword();
-        this.productKey = deviceRegisterInfo.getProductKey();
-        this.deviceSecret = deviceRegisterInfo.getDeviceSecret();
-        this.regionId = deviceRegisterInfo.getRegionId();
-        this.longitude = deviceRegisterInfo.getLongitude();
-        this.latitude = deviceRegisterInfo.getLatitude();
-        this.altitude = deviceRegisterInfo.getAltitude();
-    }
-
-    public String getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
-    }
 
     public String getDeviceIp() {
         return deviceIp;
@@ -79,14 +39,6 @@ public class DeviceInfo {
 
     public void setDevicetype(String devicetype) {
         this.devicetype = devicetype;
-    }
-
-    public Date getAddTime() {
-        return addTime;
-    }
-
-    public void setAddTime(Date addTime) {
-        this.addTime = addTime;
     }
 
     public String getDescription() {
@@ -163,13 +115,11 @@ public class DeviceInfo {
 
     @Override
     public String toString() {
-        return "DeviceInfo{" +
-                "uuid='" + uuid + '\'' +
-                ", deviceIp='" + deviceIp + '\'' +
+        return "DeviceRegisterInfo{" +
+                "deviceIp='" + deviceIp + '\'' +
                 ", deviceName='" + deviceName + '\'' +
                 ", devicetype='" + devicetype + '\'' +
-                ", addTime=" + addTime +
-                ", desc='" + description + '\'' +
+                ", description='" + description + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", productKey='" + productKey + '\'' +
