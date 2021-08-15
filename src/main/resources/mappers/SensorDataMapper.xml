@@ -10,13 +10,19 @@
      -->
     <select id="queryAllSensorData" resultType="com.pengping.iothub.entity.SensorData">
         select uuid,
-        deviceIp,
-        time,
-        temperature,
-        humidity,
-        pressure,
-        lumination,
-        color
+            deviceIp,
+            time,
+            temperature,
+            humidity,
+            pressure,
+            lumination,
+            pm2_5,
+            o2,
+            co,
+            co2,
+            color,
+            battery,
+            solarcell
          from s_sensor_data
     </select>
 
@@ -34,7 +40,13 @@
         humidity,
         pressure,
         lumination,
-        color
+        pm2_5,
+        o2,
+        co,
+        co2,
+        color,
+        battery,
+        solarcell
         )
         VALUES
         <foreach collection="list" item="data" index="index" separator=",">
@@ -46,7 +58,13 @@
             #{data.humidity},
             #{data.pressure},
             #{data.lumination},
-            #{data.color}
+            #{data.pm2_5},
+            #{data.o2},
+            #{data.co},
+            #{data.co2},
+            #{data.color},
+            #{data.battery},
+            #{data.solarcell}
             )
         </foreach>
     </insert>

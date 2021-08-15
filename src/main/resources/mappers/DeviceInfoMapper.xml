@@ -77,4 +77,8 @@
     <delete id="deleteDeviceInfoByUUID" parameterType="java.lang.String">
         delete from s_device_info where uuid=#{uuid}
     </delete>
+
+    <delete id="deleteDeviceInfoByIp" parameterType="java.lang.String">
+        delete from s_device_info where deviceip=#{deviceip}
+    </delete>
 </mapper>

@@ -8,10 +8,16 @@ public class SensorData {
     private String deviceIp;
     private Date time;
     private int timestamp;
+    private int pm2_5;
     private float temperature;
     private float humidity;
     private float pressure;
     private float lumination;
+    private float co2;
+    private float o2;
+    private float co;
+    private float battery;
+    private float solarcell;
     private String color;
 
     public String getUuid() {
@@ -46,6 +52,14 @@ public class SensorData {
         this.timestamp = timestamp;
     }
 
+    public int getPm2_5() {
+        return pm2_5;
+    }
+
+    public void setPm2_5(int pm2_5) {
+        this.pm2_5 = pm2_5;
+    }
+
     public float getTemperature() {
         return temperature;
     }
@@ -78,6 +92,46 @@ public class SensorData {
         this.lumination = lumination;
     }
 
+    public float getCo2() {
+        return co2;
+    }
+
+    public void setCo2(float co2) {
+        this.co2 = co2;
+    }
+
+    public float getO2() {
+        return o2;
+    }
+
+    public void setO2(float o2) {
+        this.o2 = o2;
+    }
+
+    public float getCo() {
+        return co;
+    }
+
+    public void setCo(float co) {
+        this.co = co;
+    }
+
+    public float getBattery() {
+        return battery;
+    }
+
+    public void setBattery(float battery) {
+        this.battery = battery;
+    }
+
+    public float getSolarcell() {
+        return solarcell;
+    }
+
+    public void setSolarcell(float solarcell) {
+        this.solarcell = solarcell;
+    }
+
     public String getColor() {
         return color;
     }
@@ -93,10 +147,16 @@ public class SensorData {
                 ", deviceIp='" + deviceIp + '\'' +
                 ", time=" + time +
                 ", timestamp=" + timestamp +
+                ", pm2_5=" + pm2_5 +
                 ", temperature=" + temperature +
                 ", humidity=" + humidity +
                 ", pressure=" + pressure +
                 ", lumination=" + lumination +
+                ", co2=" + co2 +
+                ", o2=" + o2 +
+                ", co=" + co +
+                ", battery=" + battery +
+                ", solarcell=" + solarcell +
                 ", color='" + color + '\'' +
                 '}';
     }

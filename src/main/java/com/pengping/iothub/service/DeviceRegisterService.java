@@ -28,11 +28,10 @@ public class DeviceRegisterService {
 
         logger.info("deviceRegisterInfo:"+deviceRegisterInfo);
 
-        DeviceInfo deviceInfo = deviceInfoMapper.queryDeviceInfoByIP(deviceRegisterInfo.getDeviceIp());
-        if (deviceInfo != null) {
-            deviceInfoMapper.deleteDeviceInfoByUUID(deviceInfo.getUuid());
+        List<DeviceInfo> deviceInfos = deviceInfoMapper.queryDeviceInfoByIP(deviceRegisterInfo.getDeviceIp());
+        if ((deviceInfos != null)&& (!deviceInfos.isEmpty())) {
+            deviceInfoMapper.deleteDeviceInfoByIp(deviceInfos.get(0).getDeviceIp());
         }
-
 
         List<DeviceInfo> newDeviceInfo = new ArrayList<>();
         newDeviceInfo.add(new DeviceInfo(deviceRegisterInfo));
