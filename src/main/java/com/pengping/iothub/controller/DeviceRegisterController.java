@@ -1,7 +1,6 @@
 package com.pengping.iothub.controller;
 
 
-import com.pengping.iothub.IothubApplication;
 import com.pengping.iothub.entity.DeviceInfo;
 import com.pengping.iothub.entity.DeviceRegisterInfo;
 import com.pengping.iothub.service.DeviceRegisterService;

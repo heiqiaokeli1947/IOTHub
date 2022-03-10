@@ -1,7 +1,5 @@
 package com.pengping.iothub.controller;
 
-import com.pengping.iothub.IothubApplication;
-import com.pengping.iothub.entity.DeviceInfo;
 import com.pengping.iothub.entity.SensorData;
 import com.pengping.iothub.service.DeviceDataReciveService;
 import com.pengping.iothub.util.CommonResponse;
