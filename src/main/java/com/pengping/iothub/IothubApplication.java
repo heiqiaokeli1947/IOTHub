@@ -5,8 +5,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 //https://blog.csdn.net/iku5200/article/details/82856621
+//java -classpath "./*" com.pengping.iothub.IothubApplication
 @MapperScan("com.pengping.iothub.mapper")
 @SpringBootApplication
 public class IothubApplication {
